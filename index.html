@@ -10,8 +10,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        /* 背景色与图片一致（正红色） */
         body {
-            background-color: #D94141;
+            background-color: #D63031; 
             color: #FFFFFF;
             font-family: "Microsoft Yahei", sans-serif;
             height: 100vh;
@@ -23,19 +24,18 @@
             text-align: center;
         }
         .ace-logo {
-            width: 180px;
+            width: 220px; /* 匹配图片中Logo比例 */
             height: auto;
-            margin-bottom: 30px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 4px;
+            margin-bottom: 20px;
         }
         .main-title {
             font-size: 36px;
             margin-bottom: 30px;
+            font-weight: bold;
         }
         .sub-title {
             font-size: 24px;
-            opacity: 0.8;
+            opacity: 0.9;
             margin-bottom: 35px;
         }
         .description {
@@ -47,19 +47,19 @@
         .continue-btn {
             background-color: transparent;
             color: #FFFFFF;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.4);
             padding: 10px 30px;
             font-size: 16px;
             cursor: pointer;
-            opacity: 0.8;
+            opacity: 0.9;
         }
         .continue-btn:hover {
             opacity: 1;
+            border-color: #FFFFFF;
         }
     </style>
 </head>
 <body>
-    <!-- 已替换为你提供的原始链接 -->
     <img src="https://raw.githubusercontent.com/qin93388-gif/ACE/refs/heads/main/ace-logo.png" alt="ACE腾讯游戏安全" class="ace-logo">
     <h1 class="main-title">检测到作弊者</h1>
     <p class="sub-title">比赛终止</p>
