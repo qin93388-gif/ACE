@@ -3,79 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>检测到作弊者</title>
+    <title>你已作弊</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        /* 红色背景全屏覆盖，无空白 */
+        /* 背景色：精确提取图片的红色 #D94141 */
         body {
-            background-color: #E52C2C; 
+            background-color: #D94141;
             color: #FFFFFF;
             font-family: "Microsoft Yahei", sans-serif;
             height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        /* 顶部黑色栏（与图片一致） */
+        .top-bar {
+            width: 100%;
+            height: 50px;
+            background-color: #1A1A1A;
+            display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            position: relative;
-        }
-        /* Logo全屏背景（红色叠加，无空白） */
-        .ace-logo {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* 保持Logo比例，全屏显示 */
-            opacity: 0.2; /* Logo半透明，避免遮挡文字 */
         }
-        /* 文字层：置于Logo上方 */
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 0 20px;
+        .top-bar-title {
+            font-size: 18px;
+            font-weight: normal;
         }
-        .main-title {
-            font-size: 38px;
-            font-weight: 600;
-            letter-spacing: 2px;
+        .close-btn {
+            position: absolute;
+            left: 20px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        /* Logo区域：匹配图片中的尺寸与位置 */
+        .ace-logo {
+            width: 200px;
+            height: auto;
+            margin-top: 80px; /* 避开顶部黑色栏 */
+            margin-bottom: 10px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 500;
             margin-bottom: 20px;
         }
+        /* 文字排版：与图片完全一致 */
+        .main-title {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
         .sub-title {
-            font-size: 22px;
+            font-size: 28px;
             opacity: 0.9;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
         .description {
             font-size: 14px;
             line-height: 1.6;
-            margin-bottom: 50px;
-            max-width: 500px;
+            margin-bottom: 60px;
+            max-width: 400px;
         }
+        /* 按钮：匹配图片中的红色透明样式 */
         .continue-btn {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.2);
             color: #FFFFFF;
-            border: 1px solid rgba(255,255,255,0.4);
-            padding: 10px 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 10px 40px;
             font-size: 16px;
             cursor: pointer;
-            opacity: 0.9;
         }
     </style>
 </head>
 <body>
-    <!-- Logo全屏背景（红色覆盖，无空白） -->
-    <img src="https://raw.githubusercontent.com/qin93388-gif/ACE/refs/heads/main/ace-logo.png" alt="ACE腾讯游戏安全" class="ace-logo">
-    <!-- 文字层（置于Logo上方） -->
-    <div class="content">
-        <h1 class="main-title">检测到作弊者</h1>
-        <p class="sub-title">比赛终止</p>
-        <p class="description">作弊者已受到惩罚，游戏取消，所有玩家的输赢均不计入。</p>
-        <button class="continue-btn">继续</button>
+    <!-- 顶部黑色栏 -->
+    <div class="top-bar">
+        <a href="#" class="close-btn">×</a>
+        <h3 class="top-bar-title">检测到作弊者</h3>
     </div>
+
+    <!-- Logo（已修改为白色+红色描边，与图片一致） -->
+    <img src="https://raw.githubusercontent.com/qin93388-gif/ACE/refs/heads/main/ace-logo.png" alt="ACE腾讯游戏安全" class="ace-logo">
+    <p class="logo-text">腾讯游戏安全</p>
+
+    <!-- 文字区域 -->
+    <h1 class="main-title">检测到作弊<br>者</h1>
+    <p class="sub-title">比赛终止</p>
+    <p class="description">作弊者已受到惩罚，游戏取消，所有玩家的输赢均不计入。</p>
+    <button class="continue-btn">继续</button>
 </body>
 </html>
