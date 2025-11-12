@@ -10,10 +10,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-        /* 背景色与图片一致（正红色） */
+        /* 背景色：精确提取图片中的红色 #E52C2C */
         body {
-            background-color: #D63031; 
-            color: #FFFFFF;
+            background-color: #E52C2C; 
+            color: #FFFFFF; /* 文字色：图片中的纯白色 */
             font-family: "Microsoft Yahei", sans-serif;
             height: 100vh;
             display: flex;
@@ -24,19 +24,20 @@
             text-align: center;
         }
         .ace-logo {
-            width: 220px; /* 匹配图片中Logo比例 */
+            width: 200px; /* 匹配图片中Logo的显示比例 */
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .main-title {
-            font-size: 36px;
-            margin-bottom: 30px;
-            font-weight: bold;
+            font-size: 38px; /* 匹配图片中标题的字号 */
+            margin-bottom: 0;
+            font-weight: 600;
+            letter-spacing: 2px; /* 匹配图片中文字的字间距 */
         }
         .sub-title {
-            font-size: 24px;
+            font-size: 22px;
             opacity: 0.9;
-            margin-bottom: 35px;
+            margin: 25px 0 35px;
         }
         .description {
             font-size: 14px;
