@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你已作弊</title>
+    <title>检测到作弊者</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        /* 背景色：精确提取图片的红色 #D94141 */
+        /* 背景色：精确提取图片的正红色 #E52C2C */
         body {
-            background-color: #D94141;
+            background-color: #E52C2C;
             color: #FFFFFF;
             font-family: "Microsoft Yahei", sans-serif;
             height: 100vh;
@@ -22,7 +22,7 @@
             padding: 40px 20px;
             text-align: center;
         }
-        /* 顶部黑色栏（与图片一致） */
+        /* 顶部黑色栏（与目标图一致） */
         .top-bar {
             width: 100%;
             height: 50px;
@@ -45,23 +45,23 @@
             text-decoration: none;
             color: #FFFFFF;
         }
-        /* Logo区域：匹配图片中的尺寸与位置 */
+        /* Logo区域：匹配图片尺寸与位置 */
         .ace-logo {
-            width: 200px;
+            width: 220px;
             height: auto;
-            margin-top: 80px; /* 避开顶部黑色栏 */
-            margin-bottom: 10px;
+            margin-top: 80px; /* 避开顶部栏 */
+            margin-bottom: 15px;
         }
         .logo-text {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 500;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
-        /* 文字排版：与图片完全一致 */
+        /* 文字排版：与目标图完全一致 */
         .main-title {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: bold;
-            line-height: 1.5;
+            line-height: 1.6;
             margin-bottom: 30px;
         }
         .sub-title {
@@ -75,7 +75,7 @@
             margin-bottom: 60px;
             max-width: 400px;
         }
-        /* 按钮：匹配图片中的红色透明样式 */
+        /* 按钮：匹配图片的红色透明样式 */
         .continue-btn {
             background-color: rgba(255, 255, 255, 0.2);
             color: #FFFFFF;
@@ -87,13 +87,13 @@
     </style>
 </head>
 <body>
-    <!-- 顶部黑色栏 -->
+    <!-- 顶部黑色标题栏 -->
     <div class="top-bar">
         <a href="#" class="close-btn">×</a>
         <h3 class="top-bar-title">检测到作弊者</h3>
     </div>
 
-    <!-- Logo（已修改为白色+红色描边，与图片一致） -->
+    <!-- Logo（已匹配你提供的图片颜色） -->
     <img src="https://raw.githubusercontent.com/qin93388-gif/ACE/refs/heads/main/ace-logo.png" alt="ACE腾讯游戏安全" class="ace-logo">
     <p class="logo-text">腾讯游戏安全</p>
 
